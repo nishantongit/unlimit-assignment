@@ -11,8 +11,6 @@ class JokesViewModel(private val getJokes: GetJokes) : ViewModel() {
     val jokeLive = MutableLiveData<ArrayList<JokeDom>>()
     private var jobRunning = true
 
-    fun onLoad() {
-    }
 
      suspend fun loadFromLocal() {
         getJokes.getFromLocal().collect {

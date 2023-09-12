@@ -9,8 +9,6 @@ import kotlinx.coroutines.flow.Flow
 
 @Dao
 interface JokesDao {
-    @Insert(onConflict = OnConflictStrategy.IGNORE)
-    fun insertAll(jokes: List<JokesEntity>)
 
     @Insert(onConflict = OnConflictStrategy.IGNORE)
     fun insert(joke: JokesEntity)

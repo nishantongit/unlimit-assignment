@@ -15,13 +15,10 @@ class JokesEntToDomMapper {
 
 
     fun mapList(ent: List<JokesEntity>): ArrayList<JokeDom> {
-
         val result = ArrayList<JokeDom>()
-
         ent.forEach {
             result.add(map(it))
         }
-
         return result
     }
 

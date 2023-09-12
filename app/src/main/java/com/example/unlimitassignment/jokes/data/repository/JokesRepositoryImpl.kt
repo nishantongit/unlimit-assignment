@@ -13,8 +13,6 @@ class JokesRepositoryImpl(private val rds: JokesRDS, private val lds: JokesLDS, 
     JokesRepository {
 
     override suspend fun fetchJokeFromRemote() {
-
-
             val result = rds.fetchJokes()
             if (result.isSuccessful) {
                 //save to DB
@@ -25,11 +23,9 @@ class JokesRepositoryImpl(private val rds: JokesRDS, private val lds: JokesLDS, 
                     }else{
                         //report to analytics or UI as required
                     }
-
                 }
             }
         }
-
 
 
     override suspend fun getJokesFromLocal(): Flow<ArrayList<JokeDom>> {
