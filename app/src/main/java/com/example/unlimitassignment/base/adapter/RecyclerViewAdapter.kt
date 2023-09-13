@@ -33,18 +33,12 @@ abstract class RecyclerViewAdapter :
         position: Int
     ) {
         viewDataBinding.setVariable(BR.vm, viewModel)
-        addCustomization(viewDataBinding, position, viewModel)
     }
 
     class RecyclerViewHolder(val viewBinding: ViewDataBinding) :
         RecyclerView.ViewHolder(viewBinding.root)
 
-    open fun addCustomization(
-        viewDataBinding: ViewDataBinding,
-        position: Int,
-        viewModel: RecyclerViewItemViewModel
-    ) {
-    }
+
 
     abstract fun getViewModel(position: Int): RecyclerViewItemViewModel
 
