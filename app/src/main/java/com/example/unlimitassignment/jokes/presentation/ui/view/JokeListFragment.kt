@@ -76,7 +76,7 @@ class JokeListFragment : Fragment() {
 
                 launch {
                     try {
-                        viewModel.startRepeatingJob(10000)
+                        viewModel.startRepeatingJob(60000)
                     }catch (e:java.lang.Exception){
                         Log.e("stack", e.stackTraceToString())
                         withContext(Dispatchers.Main){
